@@ -3,57 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java-Styled Hello World</title>
+    <title>Hello World with Java-like JavaScript</title>
     <style>
         body {
-            font-family: 'Courier New', monospace;
-            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            background-color: #f0f0f0;
         }
-        .container {
-            background-color: #ffffff;
-            border: 1px solid #cccccc;
-            border-radius: 5px;
+        #output {
+            font-size: 24px;
             padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #007396; /* Java logo blue */
-            margin-top: 0;
-        }
-        .code {
-            background-color: #f8f8f8;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-            padding: 10px;
-            font-size: 14px;
-        }
-        .keyword {
-            color: #7f0055;
-            font-weight: bold;
-        }
-        .string {
-            color: #2a00ff;
-        }
-        .comment {
-            color: #3f7f5f;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Java-Styled Hello World</h1>
-        <div class="code">
-            <span class="keyword">public class</span> HelloWorld {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public static void</span> main(String[] args) {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class="string">"Hello, World!"</span>);<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-            } <span class="comment">// End of HelloWorld class</span>
-        </div>
-    </div>
+    <div id="output"></div>
+
+    <script>
+        // Java-like class definition
+        class HelloWorld {
+            constructor() {
+                this.message = "Hello, World!";
+            }
+
+            displayMessage() {
+                document.getElementById('output').textContent = this.message;
+            }
+        }
+
+        // Creating an instance of HelloWorld and calling its method
+        const helloWorld = new HelloWorld();
+        helloWorld.displayMessage();
+    </script>
 </body>
 </html>
